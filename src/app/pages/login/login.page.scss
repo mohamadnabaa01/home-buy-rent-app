@@ -1,0 +1,33 @@
+
+.centered-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.login{
+    background-color: #18B3D6A8;
+
+}
+.sign-up-button{
+    color: blue;
+}
+.header{
+    background-color: #18B3D6A8;
+    color: beige;
+}
+.center-item{
+    text-align: center;
+    color: #5127CA;
+}
+.login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    color: #5127CA;
+}
