@@ -27,6 +27,26 @@ const routes: Routes = [
     path: 'home-page',
     loadChildren: () => import('./pages/home-page/home-page.module').then( m => m.HomePagePageModule)
   },
+  {
+    path: 'cars',
+    loadChildren: () => import('./pages/cars/cars.module').then( m => m.CarsPageModule)
+  },
+  {
+    path: 'homes-for-sale',
+    loadChildren: () => import('./pages/homes-for-sale/homes-for-sale.module').then( m => m.HomesForSalePageModule)
+  },
+  {
+    path: 'homes-for-rent',
+    loadChildren: () => import('./pages/homes-for-rent/homes-for-rent.module').then( m => m.HomesForRentPageModule)
+  },
+  {
+    path: 'cars-for-sale',
+    loadChildren: () => import('./pages/cars-for-sale/cars-for-sale.module').then( m => m.CarsForSalePageModule)
+  },
+  {
+    path: 'cars-for-rent',
+    loadChildren: () => import('./pages/cars-for-rent/cars-for-rent.module').then( m => m.CarsForRentPageModule)
+  },
 ];
 
 @NgModule({
