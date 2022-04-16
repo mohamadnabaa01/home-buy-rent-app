@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'cars-for-sale',
+    redirectTo: 'homes-for-sale-more-info',
     pathMatch: 'full'
   },
   {
@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'cars-for-rent',
     loadChildren: () => import('./pages/cars-for-rent/cars-for-rent.module').then( m => m.CarsForRentPageModule)
+  },
+  {
+    path: 'homes-for-sale-more-info',
+    loadChildren: () => import('./pages/homes-for-sale-more-info/homes-for-sale-more-info.module').then( m => m.HomesForSaleMoreInfoPageModule)
   },
 ];
 
