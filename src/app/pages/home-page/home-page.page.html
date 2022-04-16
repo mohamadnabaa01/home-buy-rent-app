@@ -7,12 +7,12 @@
 <body>
   <ion-content>
     <div>
-      <ion-card style="background-color: #18B3D6A8; color: beige; margin-top: 80px;">
+      <ion-card style="background-color: #18B3D6A8; color: beige; margin-top: 80px; padding: 2px;">
         <ion-card-content>
           <h1>Home & Car Buy/Rent App</h1>
         </ion-card-content>
       </ion-card>
-      <ion-card style="background-color: #5127CA; color: beige">
+      <ion-card style="background-color: #5127CA; color: beige; padding: 2px;">
         <ion-card-content>
           <h1>Home Page / Homes</h1>
         </ion-card-content>
@@ -27,7 +27,7 @@
           <ion-chip class="chip-view">
             <ion-card class="card-view">
               <ion-card-content>
-                <a>Homes</a>
+                <a class="button-text">Homes</a>
               </ion-card-content>
             </ion-card>
             <ion-card class="card-view">
@@ -39,7 +39,7 @@
           <ion-chip class="chip-view2">
             <ion-card class="card-view2">
               <ion-card-content>
-                <a>Cars</a>
+                <a class="button-text">Cars</a>
               </ion-card-content>
             </ion-card>
             <ion-card class="card-view2">
@@ -50,101 +50,125 @@
           </ion-chip>
         </ion-card-content>
       </ion-card>
+      
       <ion-card>
-        <ion-card-content class="align-labels">
+        <ion-card-content class="align-labels"  style="border: #18B3D6A8 solid 5px; border-radius: 10px;">
           <ion-label class="label1">Homes For Sale</ion-label>
           <ion-label class="label2" onclick="HomesForSale">See All</ion-label>
         </ion-card-content>
       </ion-card>
 
-      <ion-card style="background-color:#18B3D6A8;">
+      <ion-card style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
           <ion-img src="home.png" style="width: 100%;"></ion-img>
-        <ion-card-content class="align-cards">
-          <ion-img src="address.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">Bhamdoun, Lebanon</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="price_tag.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">150,000 $</a>
+          <ion-img src="address.png" class="image-size"></ion-img>
+          <a class="text">Bhamdoun, Lebanon</a>
+        </ion-card-content>
+        <ion-card-content class="align-cards">
+          <ion-img src="price_tag.png"  class="image-size"></ion-img>
+          <a class="text">150,000 $</a>
         </ion-card-content>
       </ion-card>
 
-      <ion-card style="background-color:#18B3D6A8;">
+      <ion-card style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
           <ion-img src="home.png" style="width: 100%;"></ion-img>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="address.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">Bhamdoun, Lebanon</a>
+          <ion-img src="address.png" class="image-size"></ion-img>
+          <a class="text">Bhamdoun, Lebanon</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="price_tag.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">150,000 $</a>
+          <ion-img src="price_tag.png" class="image-size"></ion-img>
+          <a class="text">150,000 $</a>
         </ion-card-content>
       </ion-card>
-      <ion-card style="background-color:#18B3D6A8;">
+
+      <ion-card style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
           <ion-img src="home.png" style="width: 100%;"></ion-img>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="address.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">Bhamdoun, Lebanon</a>
+          <ion-img src="address.png" class="image-size"></ion-img>
+          <a class="text">Bhamdoun, Lebanon</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="price_tag.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">150,000 $</a>
+          <ion-img src="price_tag.png" class="image-size"></ion-img>
+          <a class="text">150,000 $</a>
         </ion-card-content>
       </ion-card>
 
       <ion-card>
-        <ion-card-content class="align-labels">
+        <ion-card-content class="align-labels" style="border: #18B3D6A8 solid 5px; border-radius: 10px;">
           <ion-label class="label1">Homes For Rent</ion-label>
           <ion-label class="label2" onclick="HomesForSale">See All</ion-label>
         </ion-card-content>
       </ion-card>
 
-      <ion-card style="background-color:#18B3D6A8;">
+      <ion-card style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
           <ion-img src="home.png" style="width: 100%;"></ion-img>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="address.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">Bhamdoun, Lebanon</a>
+          <ion-img src="address.png" class="image-size"></ion-img>
+          <a class="text">Bhamdoun, Lebanon</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="price_tag.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">150,000 $ / year</a>
+          <ion-img src="price_tag.png" class="image-size"></ion-img>
+          <a class="text">150,000 $</a>
         </ion-card-content>
       </ion-card>
 
-      <ion-card style="background-color:#18B3D6A8;">
+      <ion-card style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
           <ion-img src="home.png" style="width: 100%;"></ion-img>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="address.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">Bhamdoun, Lebanon</a>
+          <ion-img src="address.png" class="image-size"></ion-img>
+          <a class="text">Bhamdoun, Lebanon</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="price_tag.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">150,000 $ / year</a>
+          <ion-img src="price_tag.png" class="image-size"></ion-img>
+          <a class="text">150,000 $</a>
         </ion-card-content>
       </ion-card>
 
-      <ion-card style="background-color:#18B3D6A8;">
+      <ion-card style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
           <ion-img src="home.png" style="width: 100%;"></ion-img>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="address.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">Bhamdoun, Lebanon</a>
+          <ion-img src="address.png" class="image-size"></ion-img>
+          <a class="text">Bhamdoun, Lebanon</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="price_tag.png" style="height: 20px;"></ion-img>
-          <a style="font-size: 15px;">150,000 $ / year</a>
+          <ion-img src="price_tag.png"class="image-size"></ion-img>
+          <a class="text">150,000 $</a>
         </ion-card-content>
       </ion-card>
+
+
+      <ion-card class="card-center" style="background-color: #18B3D6A8; width: fit-content;">
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="home_bar_icon.png" class="image-size"></ion-img>
+          <a class="text-menu">Home</a>
+        </ion-card-content>
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="user_icon.png" class="image-size"></ion-img>
+          <a class="text-menu">Profile</a>
+        </ion-card-content>
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="add_to_favorites.png" class="image-size"></ion-img>
+          <a class="text-menu">Favorites</a>
+        </ion-card-content>
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="sign_out.png" class="image-size"></ion-img>
+          <a class="text-menu">Exit</a>
+        </ion-card-content>
+      </ion-card>
+      
     </div>
   </ion-content>
 </body>
