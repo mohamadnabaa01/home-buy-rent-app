@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'homes-for-sale-more-info',
     loadChildren: () => import('./pages/homes-for-sale-more-info/homes-for-sale-more-info.module').then( m => m.HomesForSaleMoreInfoPageModule)
   },
+  {
+    path: 'homes-for-rent-more-info',
+    loadChildren: () => import('./pages/homes-for-rent-more-info/homes-for-rent-more-info.module').then( m => m.HomesForRentMoreInfoPageModule)
+  },
 ];
 
 @NgModule({
