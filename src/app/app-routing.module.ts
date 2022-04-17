@@ -79,6 +79,10 @@ const routes: Routes = [
     path: 'cars-for-rent-filter',
     loadChildren: () => import('./pages/cars-for-rent-filter/cars-for-rent-filter.module').then( m => m.CarsForRentFilterPageModule)
   },
+  {
+    path: 'favorites',
+    loadChildren: () => import('./pages/favorites/favorites.module').then( m => m.FavoritesPageModule)
+  },
 ];
 
 @NgModule({
