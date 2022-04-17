@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'cars-for-sale-more-info',
     loadChildren: () => import('./pages/cars-for-sale-more-info/cars-for-sale-more-info.module').then( m => m.CarsForSaleMoreInfoPageModule)
   },
+  {
+    path: 'cars-for-rent-more-info',
+    loadChildren: () => import('./pages/cars-for-rent-more-info/cars-for-rent-more-info.module').then( m => m.CarsForRentMoreInfoPageModule)
+  },
 ];
 
 @NgModule({
