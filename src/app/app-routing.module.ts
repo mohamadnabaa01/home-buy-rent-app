@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'homes-for-sale-filter',
+    redirectTo: 'profile-seller',
     pathMatch: 'full'
   },
   {
@@ -82,6 +82,10 @@ const routes: Routes = [
   {
     path: 'favorites',
     loadChildren: () => import('./pages/favorites/favorites.module').then( m => m.FavoritesPageModule)
+  },
+  {
+    path: 'profile-seller',
+    loadChildren: () => import('./pages/profile-seller/profile-seller.module').then( m => m.ProfileSellerPageModule)
   },
 ];
 
