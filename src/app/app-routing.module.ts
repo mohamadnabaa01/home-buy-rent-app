@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'homes-for-sale-more-info',
+    redirectTo: 'homes-for-sale-filter',
     pathMatch: 'full'
   },
   {
@@ -62,6 +62,10 @@ const routes: Routes = [
   {
     path: 'cars-for-rent-more-info',
     loadChildren: () => import('./pages/cars-for-rent-more-info/cars-for-rent-more-info.module').then( m => m.CarsForRentMoreInfoPageModule)
+  },
+  {
+    path: 'homes-for-sale-filter',
+    loadChildren: () => import('./pages/homes-for-sale-filter/homes-for-sale-filter.module').then( m => m.HomesForSaleFilterPageModule)
   },
 ];
 
