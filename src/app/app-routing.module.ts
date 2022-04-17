@@ -75,6 +75,10 @@ const routes: Routes = [
     path: 'cars-for-sale-filter',
     loadChildren: () => import('./pages/cars-for-sale-filter/cars-for-sale-filter.module').then( m => m.CarsForSaleFilterPageModule)
   },
+  {
+    path: 'cars-for-rent-filter',
+    loadChildren: () => import('./pages/cars-for-rent-filter/cars-for-rent-filter.module').then( m => m.CarsForRentFilterPageModule)
+  },
 ];
 
 @NgModule({
