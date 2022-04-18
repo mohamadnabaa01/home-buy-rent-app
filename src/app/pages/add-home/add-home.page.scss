@@ -33,28 +33,28 @@
     align-items: center;
 }
 .card-view{
-    background-color: rgb(43, 180, 180);
-    border: rgb(43, 180, 180) solid 5px;
-}
-.card-view2{
-    background-color:#5127CA;
+    background-color: #5127CA;
     border: #5127CA solid 5px;
 }
+.card-view2{
+    background-color:rgb(43, 180, 180);
+    border:rgb(43, 180, 180) solid 5px;
+}
 .chip-view{
-    background-color: rgb(43, 180, 180);
+    background-color: #5127CA;
     justify-content: center;
     align-items: center;
     width: 800px;
     height: 50px;
-    border: rgb(43, 180, 180) solid 2px;
+    border: #5127CA solid 2px;
 }
 .chip-view2{
-    background-color:#5127CA;
+    background-color:rgb(43, 180, 180);
     justify-content: center;
     align-items: center;
     width: 800px;
     height: 50px;
-    border:#5127CA solid 5px;
+    border:rgb(43, 180, 180) solid 5px;
 }
 .card-center{
     display: flex;
@@ -118,62 +118,15 @@ ion-card-content{
     margin-left: 13px;
     margin-right: 13px;
 }
-.content1{
+.set-background{
     background-color: rgb(43, 180, 180);
-    color: #5127CA;
-    height: fit-content;
-    padding: 5px;
-    border: rgb(43, 180, 180) solid 2px;
+    width: 150px;
+    margin: 10px;
 }
-.content2{
-    background-color: #5127CA;
-    height: fit-content;
-    padding: 5px;
-    border: #5127CA solid 5px;
-}
-ion-input {
-    --color: #5127CA;
-    --padding-bottom: 4px;
-    --padding-end: 4px;
-    --padding-start: 4px;
-    --padding-top: 4px;
-    --placeholder-color: #5127CA;
-    --placeholder-font-style: initial;
-}
-ion-item {
-    --background: #3880ff;
-    --background-activated: #3880ff;
-    --background-activated-opacity: 1;
-    --background-focused: #3880ff;
-    --background-focused-opacity: 1;
-    --background-hover: #3880ff;
-    --background-hover-opacity: 1;
-    --border-color: #3880ff;
-    --border-radius: 8px;
-    --border-style: solid;
-    --border-width: 8px;
-    --color: #ffffff;
-    --color-activated: #3880ff;
-    --color-focused: #3880ff;
-    --color-hover: #3880ff;
-    --detail-icon-color: #989aa2;
-    --detail-icon-font-size: 16px;
-    --detail-icon-opacity: 1;
-    --highlight-color-focused: #0cd1e8;
-    --highlight-color-invalid: #f04141;
-    --highlight-color-valid: #10dc60;
-    --highlight-height: 32px;
-    --inner-border-width: 8px;
-    --inner-box-shadow: 4px 4px;
-    --inner-padding-bottom: 4px;
-    --inner-padding-end: 4px;
-    --inner-padding-start: 4px;
-    --inner-padding-top: 4px;
-    --min-height: 24px;
-    --padding-bottom: 4px;
-    --padding-end: 4px;
-    --padding-start: 4px;
-    --padding-top: 4px;
-    --ripple-color: #1e1e1e;
-    --transition: background-color 15ms linear;
+.text2{
+    font-size: 10px;
+    color:beige;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
