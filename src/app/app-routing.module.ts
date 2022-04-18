@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'sales-list',
+    redirectTo: 'add-home',
     pathMatch: 'full'
   },
   {
@@ -98,6 +98,10 @@ const routes: Routes = [
   {
     path: 'sales-list',
     loadChildren: () => import('./pages/sales-list/sales-list.module').then( m => m.SalesListPageModule)
+  },
+  {
+    path: 'add-home',
+    loadChildren: () => import('./pages/add-home/add-home.module').then( m => m.AddHomePageModule)
   },
 ];
 

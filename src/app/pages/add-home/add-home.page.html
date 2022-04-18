@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="header">Add Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<body>
+  <ion-content>
+    <div>
+      <ion-card style="background-color: #18B3D6A8; color: beige; margin-top: 80px; padding: 2px;">
+        <ion-card-content>
+          <h1>Home & Car Buy/Rent App</h1>
+        </ion-card-content>
+      </ion-card>
+      <ion-card style="background-color: #5127CA; color: beige; padding: 2px; margin-bottom: 50px;">
+        <ion-card-content>
+          <h1>My Profile / Add Home</h1>
+        </ion-card-content>
+      </ion-card>
+      
+      <ion-card>
+        <ion-card-content class="content1">
+          <a class="text">Image1 (required):</a>
+        </ion-card-content>
+      </ion-card>
+      <ion-card style="margin-bottom: 30px;">
+        <ion-card-content class="content2">
+          <ion-input type="file" placeholder="" name="image1" required></ion-input>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="content1">
+          <a class="text">Image2 (optional):</a>
+        </ion-card-content>
+      </ion-card>
+      <ion-card style="margin-bottom: 30px;">
+        <ion-card-content class="content2">
+          <ion-input type="file" placeholder="" name="image2"></ion-input>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="content1">
+          <a class="text">Image3 (optional):</a>
+        </ion-card-content>
+      </ion-card>
+      <ion-card style="margin-bottom: 30px;">
+        <ion-card-content class="content2">
+          <ion-input type="file" placeholder="" name="image3"></ion-input>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-item class="content1">
+          <ion-label position="floating" class="input">Location:</ion-label>
+          <ion-input type="text" name="location" placeholder="eg. Beirut,Lebanon" required></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item class="content1">
+          <ion-label position="floating" class="input">Price: (in dollars $)</ion-label>
+          <ion-input type="number" name="price" placeholder="eg. 20000" required></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item class="content1">
+          <ion-label position="floating" class="input">Area: (in meter square)</ion-label>
+          <ion-input type="number" name="area" placeholder="eg. 120" required></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item class="content1">
+          <ion-label position="floating" class="input">Living Rooms:</ion-label>
+          <ion-input type="number" name="living_rooms" placeholder="eg. 2" required></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item class="content1">
+          <ion-label position="floating" class="input">Bedrooms:</ion-label>
+          <ion-input type="number" name="bedrooms" placeholder="eg. 2" required></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item class="content1">
+          <ion-label position="floating" class="input">Bathrooms:</ion-label>
+          <ion-input type="number" name="bathrooms" placeholder="eg. 2" required></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item class="content1">
+          <ion-label position="floating" class="input">Home Type:</ion-label>
+          <ion-input type="text" name="home_type" placeholder="eg. Building or Villa" required></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-list>
+        <ion-radio-group name="sale_type" value="sale">
+          <ion-list-header>
+            <ion-label>Sale Type:</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>Sale</ion-label>
+            <ion-radio value="sale"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Rent</ion-label>
+            <ion-radio value="rent"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+      
+      <ion-card class="card-center" style="background-color: #18B3D6A8; width: fit-content;">
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="home_bar_icon.png" class="image-size"></ion-img>
+          <a class="text-menu">Home</a>
+        </ion-card-content>
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="user_icon.png" class="image-size"></ion-img>
+          <a class="text-menu">Profile</a>
+        </ion-card-content>
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="add_to_favorites.png" class="image-size"></ion-img>
+          <a class="text-menu">Favorites</a>
+        </ion-card-content>
+        <ion-card-content class="menu-bar-item">
+          <ion-img src="sign_out.png" class="image-size"></ion-img>
+          <a class="text-menu">Exit</a>
+        </ion-card-content>
+      </ion-card>
+      
+    </div>
+  </ion-content>
+</body>
