@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'edit-profile',
+    redirectTo: 'sales-list',
     pathMatch: 'full'
   },
   {
@@ -94,6 +94,10 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     loadChildren: () => import('./pages/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },
+  {
+    path: 'sales-list',
+    loadChildren: () => import('./pages/sales-list/sales-list.module').then( m => m.SalesListPageModule)
   },
 ];
 
