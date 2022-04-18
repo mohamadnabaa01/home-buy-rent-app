@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'profile-seller',
+    redirectTo: 'profile-buyer',
     pathMatch: 'full'
   },
   {
@@ -86,6 +86,10 @@ const routes: Routes = [
   {
     path: 'profile-seller',
     loadChildren: () => import('./pages/profile-seller/profile-seller.module').then( m => m.ProfileSellerPageModule)
+  },
+  {
+    path: 'profile-buyer',
+    loadChildren: () => import('./pages/profile-buyer/profile-buyer.module').then( m => m.ProfileBuyerPageModule)
   },
 ];
 
