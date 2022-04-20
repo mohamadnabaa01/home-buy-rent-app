@@ -22,9 +22,9 @@
             <ion-label position="floating" class="input">Password:</ion-label>
             <ion-input name="password"></ion-input>
           </ion-item>
-          <ion-button color="primary" class="login-button">Log In</ion-button>
+          <ion-button color="primary" class="login-button" (click)="GoToHomePage()">Log In</ion-button>
           <br>
-          <a class="center-item">Do not have an account?</a><a class="sign-up-button" href="register"><strong>Sign Up</strong></a>
+          <a class="center-item">Do not have an account?</a><a class="sign-up-button" (click)="GoToRegister()"><strong>Sign Up</strong></a>
         </ion-card-content>
       </ion-card>
     </div>
