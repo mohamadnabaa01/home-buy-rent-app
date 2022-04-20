@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cars-for-sale-filter',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsForSaleFilterPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
+  GoToCarsForSale(){
+    this.router.navigate(['/cars-for-sale']);
+  }
+  GoToHomePage(){
+    this.router.navigate(['/home-page']);
+  }
+  GoToProfile(){
+    this.router.navigate(['/profile']);
+  }
+  GoToFavorites(){
+    this.router.navigate(['/favorites']);
+  }
+  GoToLogIn(){
+    this.router.navigate(['/login']);
+  }
+
 
 }
