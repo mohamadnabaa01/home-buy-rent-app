@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-seller',
@@ -7,9 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileSellerPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  }
+  GoToAddHome(){
+    this.router.navigate(['/add-home']);
+  }
+  GoToAddCar(){
+    this.router.navigate(['/add-car']);
+  }
+  GoToSalesList(){
+    this.router.navigate(['/sales-list']);
+  }
+  GoToEditProfile(){
+    this.router.navigate(['/edit-profile']);
+  }
+  GoToHomePage(){
+    this.router.navigate(['/home-page']);
+  }
+  GoToProfile(){
+    this.router.navigate(['/profile']);
+  }
+  GoToFavorites(){
+    this.router.navigate(['/favorites']);
+  }
+  GoToLogIn(){
+    this.router.navigate(['/login']);
   }
 
 }
