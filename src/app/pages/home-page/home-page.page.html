@@ -36,7 +36,7 @@
               </ion-card-content>
             </ion-card>
           </ion-chip>
-          <ion-chip class="chip-view2">
+          <ion-chip class="chip-view2" (click)="GoToCars()">
             <ion-card class="card-view2">
               <ion-card-content>
                 <a class="button-text">Cars</a>
@@ -54,7 +54,7 @@
       <ion-card>
         <ion-card-content class="align-labels"  style="border: #18B3D6A8 solid 5px; border-radius: 10px;">
           <ion-label class="label1">Homes For Sale</ion-label>
-          <ion-label class="label2" onclick="HomesForSale">See All</ion-label>
+          <ion-label class="label2" (click)="GoToHomesForSale()">See All</ion-label>
         </ion-card-content>
       </ion-card>
 
@@ -103,7 +103,7 @@
       <ion-card>
         <ion-card-content class="align-labels" style="border: #18B3D6A8 solid 5px; border-radius: 10px;">
           <ion-label class="label1">Homes For Rent</ion-label>
-          <ion-label class="label2" onclick="HomesForSale">See All</ion-label>
+          <ion-label class="label2" (click)="GoToHomesForRent()">See All</ion-label>
         </ion-card-content>
       </ion-card>
 
@@ -151,19 +151,19 @@
 
 
       <ion-card class="card-center" style="background-color: #18B3D6A8; width: fit-content;">
-        <ion-card-content class="menu-bar-item">
+        <ion-card-content class="menu-bar-item" (click)="GoToHomePage()">
           <ion-img src="home_bar_icon.png" class="image-size"></ion-img>
           <a class="text-menu">Home</a>
         </ion-card-content>
-        <ion-card-content class="menu-bar-item">
+        <ion-card-content class="menu-bar-item" (click)="GoToProfile()">
           <ion-img src="user_icon.png" class="image-size"></ion-img>
           <a class="text-menu">Profile</a>
         </ion-card-content>
-        <ion-card-content class="menu-bar-item">
+        <ion-card-content class="menu-bar-item" (click)="GoToFavorites()">
           <ion-img src="add_to_favorites.png" class="image-size"></ion-img>
           <a class="text-menu">Favorites</a>
         </ion-card-content>
-        <ion-card-content class="menu-bar-item">
+        <ion-card-content class="menu-bar-item" (click)="GoToLogIn()">
           <ion-img src="sign_out.png" class="image-size"></ion-img>
           <a class="text-menu">Exit</a>
         </ion-card-content>
