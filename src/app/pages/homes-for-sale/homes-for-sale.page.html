@@ -20,7 +20,7 @@
       <ion-card style="background-color: #18B3D6A8; color: beige; padding: 2px;">
         <ion-card-content>
           <h1>Filter your page:</h1>
-          <ion-img src = "filter.png" class="image-size" style="justify-content: end;"></ion-img>
+          <ion-img src = "filter.png" class="image-size" style="justify-content: end;" (click)="GoToHomesForSaleFilter()"></ion-img>
         </ion-card-content>
       </ion-card>
       
@@ -38,7 +38,7 @@
         </ion-card-content>
         <ion-card-content class="align-cards">
           <ion-img src="info.png" class="image-size"></ion-img>
-          <a class="text" style="color:#5127CA">See more information</a>
+          <a class="text" style="color:#5127CA" (click)="GoToHomesForSaleMoreInfo()">See more information</a>
           <ion-img src="add_to_favorites.png" class="image-size" style="justify-content: end;"></ion-img>
         </ion-card-content>
       </ion-card>
@@ -57,26 +57,26 @@
         </ion-card-content>
         <ion-card-content class="align-cards">
           <ion-img src="info.png" class="image-size"></ion-img>
-          <a class="text" style="color:#5127CA">See more information</a>
+          <a class="text" style="color:#5127CA" (click)="GoToHomesForSaleMoreInfo()">See more information</a>
           <ion-img src="add_to_favorites.png" class="image-size" style="justify-content: end;"></ion-img>
         </ion-card-content>
       </ion-card>
 
       <ion-card class="card-center" style="background-color: #18B3D6A8; width: fit-content;">
         <ion-card-content class="menu-bar-item">
-          <ion-img src="home_bar_icon.png" class="image-size"></ion-img>
+          <ion-img src="home_bar_icon.png" class="image-size" (click)="GoToHomePage()"></ion-img>
           <a class="text-menu">Home</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
-          <ion-img src="user_icon.png" class="image-size"></ion-img>
+          <ion-img src="user_icon.png" class="image-size" (click)="GoToProfile()"></ion-img>
           <a class="text-menu">Profile</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
-          <ion-img src="add_to_favorites.png" class="image-size"></ion-img>
+          <ion-img src="add_to_favorites.png" class="image-size" (click)="GoToFavorites()"></ion-img>
           <a class="text-menu">Favorites</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
-          <ion-img src="sign_out.png" class="image-size"></ion-img>
+          <ion-img src="sign_out.png" class="image-size" (click)="GoToLogIn()"></ion-img>
           <a class="text-menu">Exit</a>
         </ion-card-content>
       </ion-card>
