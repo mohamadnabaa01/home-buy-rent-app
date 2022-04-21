@@ -13,7 +13,7 @@ export class RegisterPage implements OnInit {
   registrationForm = this.formBuilder.group({
     first_name:[''],
     last_name:[''],
-    email:[''],
+    email_address:[''],
     phone_number:[''],
     password:[''],
     user_type:['']

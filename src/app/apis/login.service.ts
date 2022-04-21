@@ -11,11 +11,11 @@ export interface User{
 })
 export class LoginService {
 
-  private url = "http://localhost/home-car-buy-rent-db";
+  private url = "http://localhost/home_car_buy_rent_db/";
 
   constructor(private http: HttpClient) { }
 
   getAllUsers(){
-    return this.http.get<[User]>(this.url + "api.php");
+    return this.http.get<[User]>(this.url + "login.php");
   }
 }

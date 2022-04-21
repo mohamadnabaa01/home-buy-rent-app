@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
 include("db_info.php");
 
 $email_address = $_GET["email_address"];
