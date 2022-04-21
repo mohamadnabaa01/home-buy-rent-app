@@ -14,49 +14,51 @@
         </ion-card-header>
 
         <ion-card-content>
-          <ion-item>
-            <ion-label position="floating" class="input">First Name:</ion-label>
-            <ion-input type="text" name="first_name" required></ion-input>
-          </ion-item>
-          <br>
-          <ion-item>
-            <ion-label position="floating" class="input">Last Name:</ion-label>
-            <ion-input type="text" name="last_name" requires></ion-input>
-          </ion-item>
-          <br>
-          <ion-item>
-            <ion-label position="floating" class="input">Email Address:</ion-label>
-            <ion-input type="email" name="email_address" required></ion-input>
-          </ion-item>
-          <br>
-          <ion-item>
-            <ion-label position="floating" class="input">Phone Number:</ion-label>
-            <ion-input type="tel" name="phone_number" required></ion-input>
-          </ion-item>
-          <br>
-          <ion-item>
-            <ion-label position="floating" class="input">Password:</ion-label>
-            <ion-input type="password" name="password" required></ion-input>
-          </ion-item>
-          <br>
-          <ion-list style="border: #5127CA solid 3px;">
-            <ion-radio-group name="user_type" value="seller">
-              <ion-list-header>
-                <ion-label>User Type:</ion-label>
-              </ion-list-header>
-              <ion-item>
-                <ion-label>Seller</ion-label>
-                <ion-radio value="seller"></ion-radio>
-              </ion-item>
-              <ion-item>
-                <ion-label>Buyer</ion-label>
-                <ion-radio value="buyer"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
-          </ion-list>
-    
-          <ion-button color="primary" class="submit-button" (click)="GoToLogIn()">Submit</ion-button>
-          <br>
+          <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <ion-item>
+              <ion-label position="floating" class="input">First Name:</ion-label>
+              <ion-input formControlName="first_name" type="text" name="first_name" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-item>
+              <ion-label position="floating" class="input">Last Name:</ion-label>
+              <ion-input formControlName="last_name" type="text" name="last_name" requires></ion-input>
+            </ion-item>
+            <br>
+            <ion-item>
+              <ion-label position="floating" class="input">Email Address:</ion-label>
+              <ion-input formControlName="email_address" type="email" name="email_address" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-item>
+              <ion-label position="floating" class="input">Phone Number:</ion-label>
+              <ion-input formControlName="phone_number" type="tel" name="phone_number" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-item>
+              <ion-label position="floating" class="input">Password:</ion-label>
+              <ion-input formControlName="password" type="password" name="password" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-list style="border: #5127CA solid 3px;">
+              <ion-radio-group formControlName="user_type" name="user_type" value="seller">
+                <ion-list-header>
+                  <ion-label>User Type:</ion-label>
+                </ion-list-header>
+                <ion-item>
+                  <ion-label>Seller</ion-label>
+                  <ion-radio value="seller"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Buyer</ion-label>
+                  <ion-radio value="buyer"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+            <ion-button color="primary" class="submit-button" (click)="GoToLogIn()">Submit</ion-button>
+            <br>
+          </form>
+          
         </ion-card-content>
       </ion-card>
     </div>
