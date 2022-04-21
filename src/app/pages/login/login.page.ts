@@ -8,26 +8,26 @@ import { User, LoginService } from 'src/app/apis/login.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-  users: User[];
+  users : User[];
 
   constructor(private router: Router, private service: LoginService) { }
 
   ngOnInit() {
-    this.service.getAllUsers().subscribe(response => {
+    this.service.getAllUsers().subscribe(response =>{
       this.users = response;
     });
     //*ngFor="let course of courses
     //course.crn
     //addNewCourse(course:Course){
-    //return this.http.post(this.url + "post.php", JSON.stringify(course))
-  }//
-  //this.http.post<>
+      //return this.http.post(this.url + "post.php", JSON.stringify(course))
+    }
+    //this.http.post<>
 
-  GoToRegister() {
+  GoToRegister(){
     this.router.navigate(['/register']);
   }
 
-  GoToHomePage() {
+  GoToHomePage(){
     this.router.navigate(['/home-page']);
   }
 

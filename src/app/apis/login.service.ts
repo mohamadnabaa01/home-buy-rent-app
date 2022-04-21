@@ -11,7 +11,7 @@ export interface User{
 })
 export class LoginService {
 
-  private url = "http://localhost/home_car_buy_rent_db/";
+  private url = "http://localhost/HomeCarBuyRentApp/";
 
   constructor(private http: HttpClient) { }
 

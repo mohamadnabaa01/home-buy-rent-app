@@ -2,12 +2,8 @@
 header('Access-Control-Allow-Origin: *');
 include("db_info.php");
 
-$email_address = $_GET["email_address"];
-$password = hash("sha256",$_GET["password"]); 
 
-$query = $mysqli->prepare("SELECT * FROM users WHERE email_address = ? AND password = ?");
-$query->bind_param("ss", $email_address, $password);
-$query->execute(); 
+$query = $mysqli->prepare("SELECT * FROM users");
 
 $array = $query->get_result();
 
