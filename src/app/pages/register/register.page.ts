@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/apis/register.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-register',
