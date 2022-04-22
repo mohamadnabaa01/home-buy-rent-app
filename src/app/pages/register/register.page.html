@@ -14,34 +14,34 @@
         </ion-card-header>
 
         <ion-card-content>
-          <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)">
             <ion-item>
               <ion-label position="floating" class="input">First Name:</ion-label>
-              <ion-input formControlName="first_name" type="text" name="first_name" required></ion-input>
+              <ion-input ngModel type="text" name="first_name" required></ion-input>
             </ion-item>
             <br>
             <ion-item>
               <ion-label position="floating" class="input">Last Name:</ion-label>
-              <ion-input formControlName="last_name" type="text" name="last_name" requires></ion-input>
+              <ion-input ngModel type="text" name="last_name" requires></ion-input>
             </ion-item>
             <br>
             <ion-item>
               <ion-label position="floating" class="input">Email Address:</ion-label>
-              <ion-input formControlName="email_address" type="email" name="email_address" required></ion-input>
+              <ion-input ngModel type="email" name="email_address" required></ion-input>
             </ion-item>
             <br>
             <ion-item>
               <ion-label position="floating" class="input">Phone Number:</ion-label>
-              <ion-input formControlName="phone_number" type="tel" name="phone_number" required></ion-input>
+              <ion-input ngModel type="tel" name="phone_number" required></ion-input>
             </ion-item>
             <br>
             <ion-item>
               <ion-label position="floating" class="input">Password:</ion-label>
-              <ion-input formControlName="password" type="password" name="password" required></ion-input>
+              <ion-input ngModel type="password" name="password" required></ion-input>
             </ion-item>
             <br>
             <ion-list style="border: #5127CA solid 3px;">
-              <ion-radio-group formControlName="user_type" name="user_type" value="seller">
+              <ion-radio-group ngModel name="user_type" value="seller">
                 <ion-list-header>
                   <ion-label>User Type:</ion-label>
                 </ion-list-header>
@@ -55,7 +55,7 @@
                 </ion-item>
               </ion-radio-group>
             </ion-list>
-            <ion-button color="primary" class="submit-button" (click)="GoToLogIn()">Submit</ion-button>
+            <ion-button color="primary" class="submit-button">Submit</ion-button>
             <br>
           </form>
           

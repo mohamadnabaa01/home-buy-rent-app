@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormBuilder, Validators } from '@angular/forms'; 
 import { RegisterService } from 'src/app/apis/register.service';
 
 @Component({
@@ -10,26 +10,17 @@ import { RegisterService } from 'src/app/apis/register.service';
 })
 export class RegisterPage implements OnInit {
 
-  registrationForm = this.formBuilder.group({
-    first_name:[''],
-    last_name:[''],
-    email_address:[''],
-    phone_number:[''],
-    password:[''],
-    user_type:['']
-  });
 
-  constructor(private router: Router, private formBuilder:FormBuilder, private service:RegisterService) { }
+  constructor(private router: Router, private service:RegisterService) { }
 
   ngOnInit() {
   }
-
-  GoToLogIn(){
-    this.router.navigate(['/login']);
-  }
  
-  onSubmit(){
-    this.service.addAccount(this.registrationForm.value);
+  public onSubmit(form: NgForm){
+    const user = form.value;
+    this.service.addAccount(user).subscribe(response =>{
+      this.router.navigate(['/home-page']);
+    });
   }
 
 }

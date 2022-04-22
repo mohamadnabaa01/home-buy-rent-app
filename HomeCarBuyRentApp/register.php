@@ -1,5 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
+header('Access-COntrol-Allow-Headers:Content-Type');
+
 include("db_info.php");
 
 $data = json_decode(file_get_contents("php://input"));
@@ -7,7 +9,7 @@ $data = json_decode(file_get_contents("php://input"));
 $first_name = $data->first_name;
 $last_name = $data->last_name;
 $email_address = $data->email_address;
-$phone_number = $data->phone_number;
+$phone_number = intval($data->phone_number);
 $password = hash("sha256",$data->password);
 $user_type = $data->user_type;
 

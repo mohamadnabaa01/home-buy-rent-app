@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 export interface User{
   first_name: string,
@@ -21,6 +21,7 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
   addAccount(user:User){
-    return this.http.post(this.url + "register.php", JSON.stringify(user));
+    console.log(user);
+    return this.http.post(this.url + "register.php", user);
   }
 }
