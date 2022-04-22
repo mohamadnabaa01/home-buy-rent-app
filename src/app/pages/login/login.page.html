@@ -14,17 +14,20 @@
         </ion-card-header>
 
         <ion-card-content>
-          <ion-item>
-            <ion-label position="floating" class="input">Email Address:</ion-label>
-            <ion-input name="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating" class="input">Password:</ion-label>
-            <ion-input name="password"></ion-input>
-          </ion-item>
-          <ion-button color="primary" class="login-button" (click)="GoToHomePage()">Log In</ion-button>
-          <br>
-          <a class="center-item">Do not have an account?</a><a class="sign-up-button" (click)="GoToRegister()"><strong>Sign Up</strong></a>
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <ion-item>
+              <ion-label position="floating" class="input">Email Address:</ion-label>
+              <ion-input ngModel name="email_address" type="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating" class="input">Password:</ion-label>
+              <ion-input ngModel name="password" type="password"></ion-input>
+            </ion-item>
+            <ion-button color="primary" class="login-button" type="submit">Log In</ion-button>
+            <br>
+          </form>
+          <a class="center-item">Do not have an account?</a><a class="sign-up-button"
+            (click)="GoToRegister()"><strong>Sign Up</strong></a>
         </ion-card-content>
       </ion-card>
     </div>

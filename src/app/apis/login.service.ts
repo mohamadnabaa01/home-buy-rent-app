@@ -3,7 +3,8 @@ import {HttpClient} from '@angular/common/http';
 
 
 export interface User{
-  id: string,
+  email_address: string, 
+  password: string
 }
 
 @Injectable({
@@ -15,7 +16,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  getAllUsers(){
-    return this.http.get<[User]>(this.url + "login.php");
+  checkUser(user : User){
+    return this.http.post(this.url + 'login.php', user);
   }
 }

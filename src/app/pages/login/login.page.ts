@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User, LoginService } from 'src/app/apis/login.service';
+import { LoginService } from 'src/app/apis/login.service';
+import { NgForm } from '@angular/forms';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +10,11 @@ import { User, LoginService } from 'src/app/apis/login.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-  users : User[];
 
-  constructor(private router: Router, private service: LoginService) { }
+  constructor(private router: Router, private service: LoginService, private storage: Storage) { }
 
   ngOnInit() {
-    this.service.getAllUsers().subscribe(response =>{
-      this.users = response;
-    });
-    //*ngFor="let course of courses
-    //course.crn
-    //addNewCourse(course:Course){
-      //return this.http.post(this.url + "post.php", JSON.stringify(course))
     }
-    //this.http.post<>
 
   GoToRegister(){
     this.router.navigate(['/register']);
@@ -29,6 +22,16 @@ export class LoginPage {
 
   GoToHomePage(){
     this.router.navigate(['/home-page']);
+  }
+
+  public onSubmit(form : NgForm){
+    const user = form.value;
+    this.service.checkUser(user).subscribe(response =>{
+      if(response != null){
+        localStorage.setItem('email-logged-in', String(response));
+        this.router.navigate(['/home-page']);
+      }
+    });
   }
 
 }
