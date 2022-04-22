@@ -16,12 +16,11 @@ export interface User{
 
 export class RegisterService {
   
-  private url = "http://localhost/HomeCarBuyRentApp/";
+  private url = 'http://localhost/HomeCarBuyRentApp/';
 
   constructor(private http: HttpClient) { }
 
-  addAccount(user:User){
-    console.log(user);
-    return this.http.post(this.url + "register.php", user);
+  addAccount(user: User){
+    return this.http.post(this.url + 'register.php', user);
   }
 }

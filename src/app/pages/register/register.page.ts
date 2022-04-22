@@ -11,7 +11,7 @@ import { RegisterService } from 'src/app/apis/register.service';
 export class RegisterPage implements OnInit {
 
 
-  constructor(private router: Router, private service:RegisterService) { }
+  constructor(private router: Router, private service:RegisterService, private storage: Storage) { }
 
   ngOnInit() {
   }
@@ -19,7 +19,10 @@ export class RegisterPage implements OnInit {
   public onSubmit(form: NgForm){
     const user = form.value;
     this.service.addAccount(user).subscribe(response =>{
-      this.router.navigate(['/home-page']);
+      if(response != null){
+        localStorage.setItem('email-logged-in', String(response));
+        this.router.navigate(['/home-page']);
+      }
     });
   }
 
