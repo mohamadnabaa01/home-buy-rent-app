@@ -26,7 +26,7 @@ export class HomePagePage implements OnInit {
     this.router.navigate(['/home-page']);
   }
   GoToProfile(){
-    this.router.navigate(['/profile']);
+    this.router.navigate(['/profile-seller']);
   }
   GoToFavorites(){
     this.router.navigate(['/favorites']);
