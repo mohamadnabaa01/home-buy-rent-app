@@ -39,9 +39,9 @@ export class AddHomePage implements OnInit {
         this.router.navigate(['/sales-list']);
       }
     });
-    const user_id = parseInt(localStorage.getItem('user_id'));
-    const home_id = parseInt(localStorage.getItem('home_id'));
-    this.user_home = {user_id, home_id};
+    const User_id = parseInt(localStorage.getItem('user_id'));
+    const Home_id = parseInt(localStorage.getItem('home_id'));
+    this.user_home = { user_id : User_id, home_id : Home_id};
     this.service.addHomeToUser(this.user_home, form.value.sale_type).subscribe(response =>{
       if(response != null){
         console.log("added home successfully");
