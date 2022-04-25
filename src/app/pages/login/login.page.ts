@@ -28,7 +28,7 @@ export class LoginPage {
     const user = form.value;
     this.service.checkUser(user).subscribe(response =>{
       if(response != null){
-        localStorage.setItem('email-logged-in', String(response));
+        localStorage.setItem('user_id', String(response));
         this.router.navigate(['/home-page']);
       }
     });

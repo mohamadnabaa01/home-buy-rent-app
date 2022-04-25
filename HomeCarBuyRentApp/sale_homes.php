@@ -21,6 +21,15 @@ $query = $mysqli->prepare("INSERT INTO sale_homes (image1, image2, image3, locat
 $query->bind_param("ssssiiiiis", $image1, $image2, $image3, $location, $price, $area, $living_rooms, $bedrooms, $bathrooms, $home_type);
 $query->execute();
 
-$json_response = json_encode($home_type);
+$query2 = $mysqli->prepare("SELECT `sale_home_id` from `sale_homes` ORDER BY `sale_home_id` DESC LIMIT 1");
+$query2->execute();
+
+$array = $query2->get_result();
+
+if($home_id = $array->fetch_assoc()){
+    $response = $home_id["sale_home_id"];
+}
+
+$json_response = json_encode($response);
 echo $json_response;
 ?>
