@@ -6,8 +6,8 @@ include "db_info.php";
 
 $data = json_decode(file_get_contents("php://input"));
 
-$user_id = intval($data->user_id);
-$rent_home_id = intval($data->home_id);
+$user_id = $data->user_id;
+$rent_home_id = $data->home_id;
 
 $query = $mysqli->prepare("INSERT INTO user_rent_homes (user_id, rent_home_id) VALUES (?, ?)");
 $query->bind_param("ii", $user_id, $rent_home_id);

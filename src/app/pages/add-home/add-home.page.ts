@@ -13,7 +13,6 @@ export class AddHomePage implements OnInit {
 
   constructor(private router:Router, private service: AddHomeService, private storage: Storage) { }
 
-  user_home: User_Home;
   ngOnInit() {
   }
   GoToSaleList(){
@@ -41,8 +40,12 @@ export class AddHomePage implements OnInit {
     });
     const User_id = parseInt(localStorage.getItem('user_id'));
     const Home_id = parseInt(localStorage.getItem('home_id'));
-    this.user_home = { user_id : User_id, home_id : Home_id};
-    this.service.addHomeToUser(this.user_home, form.value.sale_type).subscribe(response =>{
+    var user_home : User_Home = {
+      user_id: User_id,
+      home_id: Home_id
+    }
+    console.log(user_home);
+    this.service.addHomeToUser(user_home, form.value.sale_type).subscribe(response =>{
       if(response != null){
         console.log("added home successfully");
       }
