@@ -15,17 +15,14 @@ export class AddHomePage implements OnInit {
 
   ngOnInit() {
   }
-  GoToSaleList(){
-    this.router.navigate(['/sales-list']);
-  }
   GoToHomePage(){
     this.router.navigate(['/home-page']);
   }
   GoToProfile(){
     this.router.navigate(['/profile']);
   }
-  GoToFavorites(){
-    this.router.navigate(['/favorites']);
+  GoToHomesForRent(){
+    this.router.navigate(['/homes-for-rent']);
   }
   GoToLogIn(){
     this.router.navigate(['/login']);

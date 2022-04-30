@@ -18,9 +18,6 @@ export class ProfileSellerPage implements OnInit {
   GoToAddCar(){
     this.router.navigate(['/add-car']);
   }
-  GoToSalesList(){
-    this.router.navigate(['/sales-list']);
-  }
   GoToEditProfile(){
     this.router.navigate(['/edit-profile']);
   }
@@ -30,8 +27,8 @@ export class ProfileSellerPage implements OnInit {
   GoToProfile(){
     this.router.navigate(['/profile']);
   }
-  GoToFavorites(){
-    this.router.navigate(['/favorites']);
+  GoToHomesForRent(){
+    this.router.navigate(['/homes-for-rent']);
   }
   GoToLogIn(){
     this.router.navigate(['/login']);
