@@ -18,14 +18,25 @@
         </ion-card-content>
       </ion-card>
       <ion-card>
-        <ion-card-content>
-          <ion-img src="home.png"></ion-img>
-        </ion-card-content>
+        <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="ios">
+          <ion-slide>
+            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          </ion-slide>
+        </ion-slides>
       </ion-card>
       <ion-card class="card-center">
         <ion-card-content>
           <ion-chip class="chip-view">
-            <ion-card class="card-view">
+            <ion-card class="card-view" (click)="GoToHomesForSale()">
               <ion-card-content>
                 <a class="button-text">Homes For Sale</a>
               </ion-card-content>
@@ -159,9 +170,9 @@
           <ion-img src="user_icon.png" class="image-size"></ion-img>
           <a class="text-menu">Profile</a>
         </ion-card-content>
-        <ion-card-content class="menu-bar-item" (click)="GoToFavorites()">
-          <ion-img src="add_to_favorites.png" class="image-size"></ion-img>
-          <a class="text-menu">Favorites</a>
+        <ion-card-content class="menu-bar-item" (click)="GoToHomesForRent()">
+          <ion-img src="home_icon.png" class="image-size"></ion-img>
+          <a class="text-menu">Rent</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item" (click)="GoToLogIn()">
           <ion-img src="sign_out.png" class="image-size"></ion-img>

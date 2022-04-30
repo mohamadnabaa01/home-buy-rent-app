@@ -13,9 +13,6 @@ export class HomePagePage implements OnInit {
   ngOnInit() {
   }
 
-  GoToCars(){
-    this.router.navigate(['/cars']);
-  }
   GoToHomesForSale(){
     this.router.navigate(['/homes-for-sale']);
   }
@@ -27,9 +24,6 @@ export class HomePagePage implements OnInit {
   }
   GoToProfile(){
     this.router.navigate(['/profile-seller']);
-  }
-  GoToFavorites(){
-    this.router.navigate(['/favorites']);
   }
   GoToLogIn(){
     this.router.navigate(['/login']);
