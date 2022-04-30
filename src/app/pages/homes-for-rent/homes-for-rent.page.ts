@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Home, HomesForRentService } from 'src/app/apis/homes-for-rent.service';
 
 @Component({
   selector: 'app-homes-for-rent',
@@ -8,12 +9,21 @@ import { Router } from '@angular/router';
 })
 export class HomesForRentPage implements OnInit {
 
-  constructor(private router:Router) { }
+  HomesForRent: Home[];
+
+  constructor(private router:Router, private service: HomesForRentService, private storage: Storage) { }
 
   ngOnInit() {
+    this.service.getHomesForRent().subscribe(response=>{
+      if(response != null)
+        this.HomesForRent = response;
+    })
   }
-  GoToHomesForRentMoreInfo(){
-    this.router.navigate(['/homes-for-rent-more-info']);
+  GoToHomesForRentMoreInfo(home: Home){
+    this.service.getHomeForRentID(home).subscribe(response=>{
+      if(response != null)
+        localStorage.setItem('home-for-rent-id', String(response));
+    })
   }
   GoToHomesForRentFilter(){
     this.router.navigate(['/homes-for-rent-filter']);
