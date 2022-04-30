@@ -22,24 +22,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home-page/home-page.module').then( m => m.HomePagePageModule)
   },
   {
-    path: 'cars',
-    loadChildren: () => import('./pages/cars/cars.module').then( m => m.CarsPageModule)
-  },
-  {
     path: 'homes-for-sale',
     loadChildren: () => import('./pages/homes-for-sale/homes-for-sale.module').then( m => m.HomesForSalePageModule)
   },
   {
     path: 'homes-for-rent',
     loadChildren: () => import('./pages/homes-for-rent/homes-for-rent.module').then( m => m.HomesForRentPageModule)
-  },
-  {
-    path: 'cars-for-sale',
-    loadChildren: () => import('./pages/cars-for-sale/cars-for-sale.module').then( m => m.CarsForSalePageModule)
-  },
-  {
-    path: 'cars-for-rent',
-    loadChildren: () => import('./pages/cars-for-rent/cars-for-rent.module').then( m => m.CarsForRentPageModule)
   },
   {
     path: 'homes-for-sale-more-info',
@@ -50,32 +38,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/homes-for-rent-more-info/homes-for-rent-more-info.module').then( m => m.HomesForRentMoreInfoPageModule)
   },
   {
-    path: 'cars-for-sale-more-info',
-    loadChildren: () => import('./pages/cars-for-sale-more-info/cars-for-sale-more-info.module').then( m => m.CarsForSaleMoreInfoPageModule)
-  },
-  {
-    path: 'cars-for-rent-more-info',
-    loadChildren: () => import('./pages/cars-for-rent-more-info/cars-for-rent-more-info.module').then( m => m.CarsForRentMoreInfoPageModule)
-  },
-  {
     path: 'homes-for-sale-filter',
     loadChildren: () => import('./pages/homes-for-sale-filter/homes-for-sale-filter.module').then( m => m.HomesForSaleFilterPageModule)
   },
   {
     path: 'homes-for-rent-filter',
     loadChildren: () => import('./pages/homes-for-rent-filter/homes-for-rent-filter.module').then( m => m.HomesForRentFilterPageModule)
-  },
-  {
-    path: 'cars-for-sale-filter',
-    loadChildren: () => import('./pages/cars-for-sale-filter/cars-for-sale-filter.module').then( m => m.CarsForSaleFilterPageModule)
-  },
-  {
-    path: 'cars-for-rent-filter',
-    loadChildren: () => import('./pages/cars-for-rent-filter/cars-for-rent-filter.module').then( m => m.CarsForRentFilterPageModule)
-  },
-  {
-    path: 'favorites',
-    loadChildren: () => import('./pages/favorites/favorites.module').then( m => m.FavoritesPageModule)
   },
   {
     path: 'profile-seller',
@@ -90,17 +58,9 @@ const routes: Routes = [
     loadChildren: () => import('./pages/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
   },
   {
-    path: 'sales-list',
-    loadChildren: () => import('./pages/sales-list/sales-list.module').then( m => m.SalesListPageModule)
-  },
-  {
     path: 'add-home',
     loadChildren: () => import('./pages/add-home/add-home.module').then( m => m.AddHomePageModule)
-  },
-  {
-    path: 'add-car',
-    loadChildren: () => import('./pages/add-car/add-car.module').then( m => m.AddCarPageModule)
-  },
+  }
 ];
 
 @NgModule({
