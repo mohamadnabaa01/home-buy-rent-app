@@ -24,9 +24,6 @@ export class HomesForRentPage implements OnInit {
   GoToProfile(){
     this.router.navigate(['/profile']);
   }
-  GoToFavorites(){
-    this.router.navigate(['/favorites']);
-  }
   GoToLogIn(){
     this.router.navigate(['/login']);
   }
