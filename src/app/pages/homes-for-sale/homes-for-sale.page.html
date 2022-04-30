@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="header">Home Page</ion-title>
+    <ion-title class="header">Homes For Sale</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +9,7 @@
     <div>
       <ion-card style="background-color: #18B3D6A8; color: beige; margin-top: 80px; padding: 2px;">
         <ion-card-content>
-          <h1>Home & Car Buy/Rent App</h1>
+          <h1>Home Buy/Rent App</h1>
         </ion-card-content>
       </ion-card>
       <ion-card style="background-color: #5127CA; color: beige; padding: 2px;">
@@ -39,7 +39,6 @@
         <ion-card-content class="align-cards">
           <ion-img src="info.png" class="image-size"></ion-img>
           <a class="text" style="color:#5127CA" (click)="GoToHomesForSaleMoreInfo()">See more information</a>
-          <ion-img src="add_to_favorites.png" class="image-size" style="justify-content: end;"></ion-img>
         </ion-card-content>
       </ion-card>
 
@@ -58,7 +57,6 @@
         <ion-card-content class="align-cards">
           <ion-img src="info.png" class="image-size"></ion-img>
           <a class="text" style="color:#5127CA" (click)="GoToHomesForSaleMoreInfo()">See more information</a>
-          <ion-img src="add_to_favorites.png" class="image-size" style="justify-content: end;"></ion-img>
         </ion-card-content>
       </ion-card>
 
@@ -72,8 +70,8 @@
           <a class="text-menu">Profile</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
-          <ion-img src="add_to_favorites.png" class="image-size" (click)="GoToFavorites()"></ion-img>
-          <a class="text-menu">Favorites</a>
+          <ion-img src="home_icon.png" class="image-size" (click)="GoToHomesForRent()"></ion-img>
+          <a class="text-menu">Rent</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
           <ion-img src="sign_out.png" class="image-size" (click)="GoToLogIn()"></ion-img>
