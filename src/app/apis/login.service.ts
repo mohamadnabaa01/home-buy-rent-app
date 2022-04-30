@@ -12,7 +12,7 @@ export interface User{
 })
 export class LoginService {
 
-  private url = "http://localhost/HomeCarBuyRentApp/";
+  private url = "http://localhost/HomeBuyRentApp/";
 
   constructor(private http: HttpClient) { }
 

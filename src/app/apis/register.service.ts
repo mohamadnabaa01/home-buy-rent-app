@@ -16,7 +16,7 @@ export interface User{
 
 export class RegisterService {
   
-  private url = 'http://localhost/HomeCarBuyRentApp/';
+  private url = 'http://localhost/HomeBuyRentApp/';
 
   constructor(private http: HttpClient) { }
 

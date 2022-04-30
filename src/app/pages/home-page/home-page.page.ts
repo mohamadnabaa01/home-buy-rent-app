@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Home, HomesService } from 'src/app/apis/homes.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,9 +9,20 @@ import { Router } from '@angular/router';
 })
 export class HomePagePage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service: HomesService) { }
+
+  HomesForSale : Home[];
+  HomesForRent: Home[];
 
   ngOnInit() {
+    this.service.getHomesForSale().subscribe(response=>{
+      if(response != null)
+        this.HomesForSale = response;
+    })
+    this.service.getHomesForRent().subscribe(response=>{
+      if(response != null)
+        this.HomesForRent = response;
+    })
   }
 
   GoToHomesForSale(){

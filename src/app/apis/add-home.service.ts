@@ -23,7 +23,7 @@ export interface User_Home{
 })
 export class AddHomeService {
 
-  private url = 'http://localhost/HomeCarBuyRentApp/'
+  private url = 'http://localhost/HomeBuyRentApp/'
 
   constructor(private http: HttpClient) { }
 
