@@ -20,10 +20,6 @@ export class LoginPage {
     this.router.navigate(['/register']);
   }
 
-  GoToHomePage(){
-    this.router.navigate(['/home-page']);
-  }
-
   public onSubmit(form : NgForm){
     const user = form.value;
     this.service.checkUser(user).subscribe(response =>{
