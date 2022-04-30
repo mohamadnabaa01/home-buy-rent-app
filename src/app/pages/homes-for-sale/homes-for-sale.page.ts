@@ -25,8 +25,8 @@ export class HomesForSalePage implements OnInit {
   GoToProfile(){
     this.router.navigate(['/profile']);
   }
-  GoToFavorites(){
-    this.router.navigate(['/favorites']);
+  GoToHomesForRent(){
+    this.router.navigate(['/homes-for-rent']);
   }
   GoToLogIn(){
     this.router.navigate(['/login']);
