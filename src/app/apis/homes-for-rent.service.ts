@@ -18,6 +18,7 @@ export interface Home{
   providedIn: 'root'
 })
 export class HomesForRentService {
+
   private url = 'http://localhost/HomeBuyRentApp/';
 
   constructor(private http: HttpClient) { }

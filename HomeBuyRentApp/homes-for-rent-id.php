@@ -18,14 +18,14 @@ $bathrooms = $data->bathrooms;
 $home_type = $data->home_type;
 
 $query = $mysqli->prepare("SELECT rent_home_id FROM rent_homes WHERE image1=? AND image2=? AND image3=? AND location=? AND price=? AND area=? AND living_rooms=? AND bedrooms=? AND bathrooms=? AND home_type=?");
-$query->bind_param("ssssiiiiis", $image1, $image2, $image3, $location, $price, $area, $living_rooms, $bedrooms, $bathrooms, $home_type);
+$query->bind_param("sssssiiiis", $image1, $image2, $image3, $location, $price, $area, $living_rooms, $bedrooms, $bathrooms, $home_type);
 $query->execute();
 
 $array = $query->get_result();
 
 $home_sale = $array->fetch_assoc();
 
-$response = $home_sale;
+$response = $home_sale["rent_home_id"];
 
 $json_response = json_encode($response);
 echo $json_response;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Home, HomesForRentService } from 'src/app/apis/homes-for-rent.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-homes-for-rent',
@@ -19,8 +20,10 @@ export class HomesForRentPage implements OnInit {
         this.HomesForRent = response;
     })
   }
-  GoToHomesForRentMoreInfo(home: Home){
+  public GoToHomesForRentMoreInfo(home: Home){
+    console.log(home);
     this.service.getHomeForRentID(home).subscribe(response=>{
+      console.log(response);
       if(response != null)
         localStorage.setItem('home-for-rent-id', String(response));
     })

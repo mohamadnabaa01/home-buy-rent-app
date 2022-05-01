@@ -4,7 +4,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 include "db_info.php";
 
-$query = $mysqli->prepare("SELECT location, price FROM rent_homes");
+$query = $mysqli->prepare("SELECT * FROM rent_homes");
 
 $query->execute();
 
@@ -12,8 +12,8 @@ $array = $query->get_result();
 
 $response = [];
 
-while($home_sale = $array->fetch_assoc()){
-    $response[] = $home_sale;
+while($home_rent = $array->fetch_assoc()){
+    $response[] = $home_rent;
 }
 
 $json_response = json_encode($response);

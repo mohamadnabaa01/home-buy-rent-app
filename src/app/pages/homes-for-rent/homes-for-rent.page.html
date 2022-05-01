@@ -24,6 +24,7 @@
         </ion-card-content>
       </ion-card>
       
+      
       <ion-card *ngFor = "let homes of HomesForRent" style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
           <ion-img src="home.png" style="width: 100%;"></ion-img>
@@ -38,7 +39,7 @@
         </ion-card-content>
         <ion-card-content class="align-cards">
           <ion-img src="info.png" class="image-size"></ion-img>
-          <a class="text" style="color:#5127CA" (click)="GoToHomesForRentMoreInfo()">See more information</a>
+          <a class="text" style="color:#5127CA" (click)="GoToHomesForRentMoreInfo(homes)">See more information</a>
         </ion-card-content>
       </ion-card>
 
