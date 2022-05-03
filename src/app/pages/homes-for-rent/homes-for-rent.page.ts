@@ -16,16 +16,19 @@ export class HomesForRentPage implements OnInit {
 
   ngOnInit() {
     this.service.getHomesForRent().subscribe(response=>{
-      if(response != null)
+      if(response != null){
         this.HomesForRent = response;
+      }
     })
   }
   public GoToHomesForRentMoreInfo(home: Home){
     console.log(home);
     this.service.getHomeForRentID(home).subscribe(response=>{
       console.log(response);
-      if(response != null)
+      if(response != null){
         localStorage.setItem('home-for-rent-id', String(response));
+        this.router.navigate(['/homes-for-rent-more-info']);
+      }
     })
   }
   GoToHomesForRentFilter(){
