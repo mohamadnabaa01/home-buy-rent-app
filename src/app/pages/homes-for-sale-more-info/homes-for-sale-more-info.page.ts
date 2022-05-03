@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Home, User, HomesForSaleMoreInfoService } from 'src/app/apis/homes-for-sale-more-info.service';
 
 @Component({
   selector: 'app-homes-for-sale-more-info',
@@ -8,18 +9,28 @@ import { Router } from '@angular/router';
 })
 export class HomesForSaleMoreInfoPage implements OnInit {
 
-  constructor(private router:Router) { }
+  HomeForSale: [Home];
+  UserHome: [User];
+
+  constructor(private router:Router, private service: HomesForSaleMoreInfoService) { }
 
   ngOnInit() {
+    this.service.getHomeForSale().subscribe(response=>{
+      if(response != null)
+        this.HomeForSale = response;
+      console.log(this.HomeForSale);
+    })
+    this.service.getUser().subscribe(response=>{
+      if(response != null)
+        this.UserHome = response;
+      console.log(this.UserHome);
+    })
   }
   GoToHomePage(){
     this.router.navigate(['/home-page']);
   }
   GoToProfile(){
     this.router.navigate(['/profile']);
-  }
-  GoToFavorites(){
-    this.router.navigate(['/favorites']);
   }
   GoToLogIn(){
     this.router.navigate(['/login']);

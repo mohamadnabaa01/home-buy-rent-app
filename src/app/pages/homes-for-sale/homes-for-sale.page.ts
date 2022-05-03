@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Home, HomesForSaleService } from 'src/app/apis/homes-for-sale.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-homes-for-sale',
