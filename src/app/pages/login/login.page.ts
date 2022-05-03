@@ -22,10 +22,15 @@ export class LoginPage {
 
   public onSubmit(form : NgForm){
     const user = form.value;
-    this.service.checkUser(user).subscribe(response =>{
+    this.service.checkUserID(user).subscribe(response =>{
       if(response != null){
         localStorage.setItem('user_id', String(response));
         this.router.navigate(['/home-page']);
+      }
+    });
+    this.service.checkUserType(user).subscribe(response =>{
+      if(response != null){
+        localStorage.setItem('user_type', String(response));
       }
     });
   }

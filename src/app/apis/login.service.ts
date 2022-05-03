@@ -16,7 +16,10 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  checkUser(user : User){
+  checkUserID(user : User){
     return this.http.post(this.url + 'login.php', user);
+  }
+  checkUserType(user: User){
+    return this.http.post(this.url + 'login-usertype.php', user);
   }
 }
