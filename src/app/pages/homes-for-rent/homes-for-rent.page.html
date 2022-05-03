@@ -17,17 +17,10 @@
           <h1>Homes For Rent</h1>
         </ion-card-content>
       </ion-card>
-      <ion-card style="background-color: #18B3D6A8; color: beige; padding: 2px;">
-        <ion-card-content>
-          <h1>Filter your page:</h1>
-          <ion-img src = "filter.png" class="image-size" style="justify-content: end;" (click)="GoToHomesForRentFilter()"></ion-img>
-        </ion-card-content>
-      </ion-card>
-      
       
       <ion-card *ngFor = "let homes of HomesForRent" style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content>
-          <ion-img src="home.png" style="width: 100%;"></ion-img>
+          <ion-img src="{{homes.image1}}.png" style="width: 100%;"></ion-img>
         </ion-card-content>
         <ion-card-content class="align-cards">
           <ion-img src="address.png" class="image-size"></ion-img>

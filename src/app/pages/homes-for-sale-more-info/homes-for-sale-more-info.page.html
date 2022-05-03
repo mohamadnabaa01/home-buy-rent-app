@@ -18,9 +18,17 @@
         </ion-card-content>
       </ion-card>
       <ion-card>
-        <ion-card-content>
-          <ion-img src="home.png"></ion-img>
-        </ion-card-content>
+        <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="ios">
+          <ion-slide *ngIf="HomeForSale">
+            <ion-img src="{{homes.image1}}.png" style="width: 100%;"></ion-img>
+          </ion-slide>
+          <ion-slide *ngIf="HomeForSale">
+            <ion-img src="{{homes.image2}}.png" style="width: 100%;"></ion-img>
+          </ion-slide>
+          <ion-slide *ngIf="HomeForSale">
+            <ion-img src="{{homes.image3}}.png" style="width: 100%;"></ion-img>
+          </ion-slide>
+        </ion-slides>
       </ion-card>
 
       <ion-card *ngIf="HomeForSale" style="background-color:#18B3D6A8; border: #5127CA solid 3px;">

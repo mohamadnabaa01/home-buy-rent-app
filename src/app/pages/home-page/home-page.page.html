@@ -19,17 +19,8 @@
       </ion-card>
       <ion-card>
         <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="ios">
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
-          </ion-slide>
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
-          </ion-slide>
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
-          </ion-slide>
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          <ion-slide *ngFor="let homes of HomesForSale">
+            <ion-img src="{{homes.image1}}.png" style="width: 100%;"></ion-img>
           </ion-slide>
         </ion-slides>
       </ion-card>

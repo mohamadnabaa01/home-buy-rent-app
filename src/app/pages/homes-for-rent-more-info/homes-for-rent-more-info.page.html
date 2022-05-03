@@ -17,24 +17,23 @@
           <h1>Homes For Rent / Home Info</h1>
         </ion-card-content>
       </ion-card>
+
       <ion-card>
         <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="ios">
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          <ion-slide *ngIf="HomeForSale">
+            <ion-img src="{{homes.image1}}.png" style="width: 100%;"></ion-img>
           </ion-slide>
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          <ion-slide *ngIf="HomeForSale">
+            <ion-img src="{{homes.image2}}.png" style="width: 100%;"></ion-img>
           </ion-slide>
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
-          </ion-slide>
-          <ion-slide>
-            <ion-img src="home.png" style="width: 100%;"></ion-img>
+          <ion-slide *ngIf="HomeForSale">
+            <ion-img src="{{homes.image3}}.png" style="width: 100%;"></ion-img>
           </ion-slide>
         </ion-slides>
       </ion-card>
 
-      <ion-card *ngIf = "HomeForRent" style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
+
+      <ion-card *ngIf="HomeForRent" style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content class="align-cards">
           <ion-img src="address.png" class="image-size"></ion-img>
           <a class="text"> {{HomeForRent.location}} </a>
