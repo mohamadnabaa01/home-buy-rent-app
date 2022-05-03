@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
 
 export interface Home{
+  rent_home_id: number,
   image1: string,
   image2: string,
   image3: string,

@@ -34,18 +34,18 @@
         </ion-slides>
       </ion-card>
 
-      <ion-card *ngFor="let home of HomeForRent" style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
+      <ion-card style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content class="align-cards">
           <ion-img src="address.png" class="image-size"></ion-img>
-          <a class="text">{{home.location}}</a>
+          <a class="text">{{HomeForRent.location}}</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
           <ion-img src="price_tag.png" class="image-size"></ion-img>
-          <a class="text">{{home.price}} $ / year</a>
+          <a class="text">{{HomeForRent.price}} $ / year</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
           <ion-img src="area_chart.png" class="image-size"></ion-img>
-          <a class="text">{{home.area}} meter square</a>
+          <a class="text">{{HomeForRent.area}} meter square</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
           <a class="text">Specifications:</a>
@@ -54,7 +54,7 @@
           <ion-card class="set-background">
             <ion-card-content class="align-cards">
               <ion-img src="living_room.png" class="image-size"></ion-img>
-              <a class="text">{{home.living_rooms}}</a>
+              <a class="text">{{HomeForRent.living_rooms}}</a>
             </ion-card-content>
             <ion-card-content>
               <a class="text2">Living Rooms</a>
@@ -63,7 +63,7 @@
           <ion-card class="set-background">
             <ion-card-content class="align-cards">
               <ion-img src="bedroom.png" class="image-size"></ion-img>
-              <a class="text">{{home.bedrooms}}</a>
+              <a class="text">{{HomeForRent.bedrooms}}</a>
             </ion-card-content>
             <ion-card-content>
               <a class="text2">Bedrooms</a>
@@ -72,7 +72,7 @@
           <ion-card class="set-background">
             <ion-card-content class="align-cards">
               <ion-img src="bath.png" class="image-size"></ion-img>
-              <a class="text">{{home.bathrooms}}</a>
+              <a class="text">{{HomeForRent.bathrooms}}</a>
             </ion-card-content>
             <ion-card-content>
               <a class="text2">Bathrooms</a>
@@ -82,21 +82,23 @@
 
         <ion-card-content class="align-cards">
           <ion-img src="house.png" class="image-size"></ion-img>
-          <a class="text">{{home.home_type}}</a>
+          <a class="text">{{HomeForRent.home_type}}</a>
         </ion-card-content>
-        <ion-card-content *ngFor="let user of UserHome" class="align-cards">
+
+        <ion-card-content class="align-cards">
           <ion-img src="contact.png" class="image-size"></ion-img>
-          <a class="text">{{user.first_name}}+" "+{{user.last_name}}</a>
+          <a class="text">{{UserHome.first_name}} {{UserHome.last_name}}</a>
         </ion-card-content>
-        <ion-card-content *ngFor="let user of UserHome" class="align-cards">
+        <ion-card-content class="align-cards">
           <ion-img src="email.png" class="image-size"></ion-img>
-          <a class="text">{{user.email_address}}</a>
+          <a class="text">{{UserHome.email_address}}</a>
         </ion-card-content>
-        <ion-card-content *ngFor="let user of UserHome" class="align-cards">
+        <ion-card-content class="align-cards">
           <ion-img src="phone_book.png" class="image-size"></ion-img>
-          <a class="text">{{user.phone_number}}</a>
+          <a class="text">{{UserHome.phone_number}}</a>
         </ion-card-content>
       </ion-card>
+
 
       <ion-card class="card-center" style="background-color: #18B3D6A8; width: fit-content;">
         <ion-card-content class="menu-bar-item">

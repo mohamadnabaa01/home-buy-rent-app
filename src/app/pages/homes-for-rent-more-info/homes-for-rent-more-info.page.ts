@@ -9,19 +9,21 @@ import { User, Home, HomesForRentMoreInfoService } from 'src/app/apis/homes-for-
 })
 export class HomesForRentMoreInfoPage implements OnInit {
 
-  constructor(private router:Router, private service: HomesForRentMoreInfoService) { }
+  HomeForRent: [Home];
+  UserHome: [User];
 
-  HomeForRent: Home[];
-  UserHome: User[];
+  constructor(private router:Router, private service: HomesForRentMoreInfoService) { }
 
   ngOnInit() {
     this.service.getHomeForRent().subscribe(response=>{
       if(response != null)
         this.HomeForRent = response;
+      console.log(this.HomeForRent);
     })
     this.service.getUser().subscribe(response=>{
       if(response != null)
         this.UserHome = response;
+      console.log(this.UserHome);
     })
   }
   GoToHomePage(){
