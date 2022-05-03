@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User, ProfileService } from 'src/app/apis/profile.service';
 
 @Component({
   selector: 'app-profile-buyer',
@@ -8,9 +9,16 @@ import { Router } from '@angular/router';
 })
 export class ProfileBuyerPage implements OnInit {
 
-  constructor(private router:Router) { }
+  User: [User];
+
+  constructor(private router:Router, private service: ProfileService) { }
 
   ngOnInit() {
+    this.service.getProfile().subscribe(response=>{
+      if(response != null){
+        this.User = response;
+      }
+    })
   }
   GoToEditProfile(){
     this.router.navigate(['/edit-profile']);
