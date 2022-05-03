@@ -4,7 +4,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 include "db_info.php";
 
-$query = $mysqli->prepare("SELECT location, price FROM sale_homes");
+$query = $mysqli->prepare("SELECT * FROM sale_homes");
 
 $query->execute();
 
