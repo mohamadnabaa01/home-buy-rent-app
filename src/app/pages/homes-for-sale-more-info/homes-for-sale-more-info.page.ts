@@ -30,7 +30,8 @@ export class HomesForSaleMoreInfoPage implements OnInit {
     this.router.navigate(['/home-page']);
   }
   GoToProfile(){
-    this.router.navigate(['/profile']);
+    const user_type = localStorage.getItem('user_type');
+    this.router.navigate(['/profile-' + user_type]);
   }
   GoToLogIn(){
     this.router.navigate(['/login']);

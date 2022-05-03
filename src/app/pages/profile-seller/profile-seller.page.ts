@@ -15,9 +15,6 @@ export class ProfileSellerPage implements OnInit {
   GoToAddHome(){
     this.router.navigate(['/add-home']);
   }
-  GoToAddCar(){
-    this.router.navigate(['/add-car']);
-  }
   GoToEditProfile(){
     this.router.navigate(['/edit-profile']);
   }
@@ -25,7 +22,8 @@ export class ProfileSellerPage implements OnInit {
     this.router.navigate(['/home-page']);
   }
   GoToProfile(){
-    this.router.navigate(['/profile']);
+    const user_type = localStorage.getItem('user_type');
+    this.router.navigate(['/profile-' + user_type]);
   }
   GoToHomesForRent(){
     this.router.navigate(['/homes-for-rent']);

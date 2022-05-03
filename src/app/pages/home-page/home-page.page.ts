@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Home, HomesService } from 'src/app/apis/homes.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +10,7 @@ import { Home, HomesService } from 'src/app/apis/homes.service';
 })
 export class HomePagePage implements OnInit {
 
-  constructor(private router: Router, private service: HomesService) { }
+  constructor(private router: Router, private service: HomesService, private storage: Storage) { }
 
   HomesForSale : Home[];
   HomesForRent: Home[];
@@ -35,7 +36,8 @@ export class HomePagePage implements OnInit {
     this.router.navigate(['/home-page']);
   }
   GoToProfile(){
-    this.router.navigate(['/profile-seller']);
+    const user_type = localStorage.getItem('user_type');
+    this.router.navigate(['/profile-' + user_type]);
   }
   GoToLogIn(){
     this.router.navigate(['/login']);

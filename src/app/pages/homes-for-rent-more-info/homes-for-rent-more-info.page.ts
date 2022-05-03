@@ -30,7 +30,8 @@ export class HomesForRentMoreInfoPage implements OnInit {
     this.router.navigate(['/home-page']);
   }
   GoToProfile(){
-    this.router.navigate(['/profile']);
+    const user_type = localStorage.getItem('user_type');
+    this.router.navigate(['/profile-' + user_type]);
   }
   GoToHomesForRent(){
     this.router.navigate(['/homes-for-rent']);
