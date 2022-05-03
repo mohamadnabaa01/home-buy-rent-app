@@ -23,8 +23,11 @@ export class EditProfilePage implements OnInit {
   }
   public onSubmit(form: NgForm){
     const user = form.value;
+    console.log(user);
     this.service.checkProfileChanges(user).subscribe(response=>{
-      console.log("Changes applied successfully");
+      if(response != null){
+        console.log("Changes applied successfully");
+      }
     })
   }
   GoToHomePage(){
