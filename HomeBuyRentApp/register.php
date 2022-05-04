@@ -13,11 +13,20 @@ $phone_number = $data->phone_number;
 $password = hash("sha256",$data->password);
 $user_type = $data->user_type;
 
-
-$query = $mysqli->prepare("INSERT INTO users (first_name, last_name, email_address, phone_number, password, user_type) VALUES (?, ?, ?, ?, ?, ?)");
-$query->bind_param("sssiss", $first_name, $last_name, $email_address, $phone_number, $password, $user_type);
+$query = $mysqli->prepare("SELECT email_address FROM users WHERE email_address=?");
+$query->bind_param("s", $email_address);
 $query->execute();
 
-$json_response = json_encode($email_address);
-echo $json_response;
+$array = $query->get_result();
+
+$email_address_user = $array->fetch_assoc();
+    
+if(empty($email_address_user)){
+    $query2 = $mysqli->prepare("INSERT INTO users (first_name, last_name, email_address, phone_number, password, user_type) VALUES (?, ?, ?, ?, ?, ?)");
+    $query2->bind_param("sssiss", $first_name, $last_name, $email_address, $phone_number, $password, $user_type);
+    $query2->execute();
+    $json_response = json_encode($email_address);
+    echo $json_response;
+}
+
 ?>
