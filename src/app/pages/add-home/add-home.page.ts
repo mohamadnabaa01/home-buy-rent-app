@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { AddHomeService, User_Home } from 'src/app/apis/add-home.service';
 import { Storage } from '@ionic/storage';
-import { AlertController } from '@ionic/angular';
+import { AlertController, DomController } from '@ionic/angular';
 
 @Component({
   selector: 'app-add-home',
@@ -121,23 +121,23 @@ export class AddHomePage implements OnInit {
       this.showAlertFailLocation();
       return;
     }
-    if(price == '' || !isNaN(price)){
+    if(price == ''){
       this.showAlertFailPrice();
       return;
     }
-    if(area == '' || !isNaN(area)){
+    if(area == ''){
       this.showAlertFailArea();
       return;
     }
-    if(living_rooms == '' || !isNaN(living_rooms)){
+    if(living_rooms == ''){
       this.showAlertFailLivingRooms();
       return;
     }
-    if(bedrooms == '' || !isNaN(bedrooms)){
+    if(bedrooms == ''){
       this.showAlertFailBedrooms();
       return;
     }
-    if(bathrooms == '' || !isNaN(bathrooms)){
+    if(bathrooms == ''){
       this.showAlertFailBathrooms();
       return;
     }

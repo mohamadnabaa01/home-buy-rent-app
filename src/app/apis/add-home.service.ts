@@ -18,6 +18,11 @@ export interface User_Home{
   user_id: number,
   home_id: number
 }
+
+export interface image{
+  image1: string
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,6 +33,9 @@ export class AddHomeService {
   constructor(private http: HttpClient) { }
 
   addHome(home: Home, sale_type: string){
+    localStorage.setItem('image1', home.image1);
+    localStorage.setItem('image2', home.image2);
+    localStorage.setItem('image3', home.image3);
     return this.http.post(this.url + sale_type + '_homes.php', home);
   }
 
