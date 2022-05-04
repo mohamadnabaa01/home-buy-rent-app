@@ -15,9 +15,10 @@ $query->execute();
 
 $array = $query->get_result();
 
-if($user_id = $array->fetch_assoc())
+if($user_id = $array->fetch_assoc()){
     $response = $user_id["user_id"];
 
-$json_response = json_encode($response);
-echo $json_response;
+    $json_response = json_encode($response);
+    echo $json_response;
+}
 ?>
