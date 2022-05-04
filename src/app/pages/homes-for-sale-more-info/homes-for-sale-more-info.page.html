@@ -33,15 +33,15 @@
 
       <ion-card *ngIf="HomeForSale" style="background-color:#18B3D6A8; border: #5127CA solid 3px;">
         <ion-card-content class="align-cards">
-          <ion-img src="address.png" class="image-size"></ion-img>
+          <ion-img src="../../../assets/address.png" class="image-size"></ion-img>
           <a class="text">{{HomeForSale.location}}</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="price_tag.png" class="image-size"></ion-img>
+          <ion-img src="../../../assets/price_tag.png" class="image-size"></ion-img>
           <a class="text">{{HomeForSale.price}} $</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
-          <ion-img src="area_chart.png" class="image-size"></ion-img>
+          <ion-img src="../../../assets/area_chart.png" class="image-size"></ion-img>
           <a class="text">{{HomeForSale.area}} meter square</a>
         </ion-card-content>
         <ion-card-content class="align-cards">
@@ -50,7 +50,7 @@
         <ion-card-content class="align-cards">
           <ion-card class="set-background">
             <ion-card-content class="align-cards">
-              <ion-img src="living_room.png" class="image-size"></ion-img>
+              <ion-img src="../../../assets/living_room.png" class="image-size"></ion-img>
               <a class="text">{{HomeForSale.living_rooms}}</a>
             </ion-card-content>
             <ion-card-content>
@@ -59,7 +59,7 @@
           </ion-card>
           <ion-card class="set-background">
             <ion-card-content class="align-cards">
-              <ion-img src="bedroom.png" class="image-size"></ion-img>
+              <ion-img src="../../../assets/bedroom.png" class="image-size"></ion-img>
               <a class="text">{{HomeForSale.bedrooms}}</a>
             </ion-card-content>
             <ion-card-content>
@@ -68,7 +68,7 @@
           </ion-card>
           <ion-card class="set-background">
             <ion-card-content class="align-cards">
-              <ion-img src="bath.png" class="image-size"></ion-img>
+              <ion-img src="../../../assets/bath.png" class="image-size"></ion-img>
               <a class="text">{{HomeForSale.bathrooms}}</a>
             </ion-card-content>
             <ion-card-content>
@@ -78,38 +78,38 @@
         </ion-card-content>
 
         <ion-card-content class="align-cards">
-          <ion-img src="house.png" class="image-size"></ion-img>
+          <ion-img src="../../../assets/house.png" class="image-size"></ion-img>
           <a class="text">{{HomeForSale.home_type}}</a>
         </ion-card-content>
         <ion-card-content *ngIf="UserHome" class="align-cards">
-          <ion-img src="contact.png" class="image-size"></ion-img>
+          <ion-img src="../../../assets/contact.png" class="image-size"></ion-img>
           <a class="text">{{UserHome.first_name}} {{UserHome.last_name}}</a>
         </ion-card-content>
         <ion-card-content *ngIf="UserHome" class="align-cards">
-          <ion-img src="email.png" class="image-size"></ion-img>
+          <ion-img src="../../../assets/email.png" class="image-size"></ion-img>
           <a class="text">{{UserHome.email_address}}</a>
         </ion-card-content>
         <ion-card-content *ngIf="UserHome" class="align-cards">
-          <ion-img src="phone_book.png" class="image-size"></ion-img>
+          <ion-img src="../../../assets/phone_book.png" class="image-size"></ion-img>
           <a class="text">{{UserHome.phone_number}}</a>
         </ion-card-content>
       </ion-card>
 
       <ion-card class="card-center" style="background-color: #18B3D6A8; width: fit-content;">
         <ion-card-content class="menu-bar-item">
-          <ion-img src="home_bar_icon.png" class="image-size" (click)="GoToHomePage()"></ion-img>
+          <ion-img src="../../../assets/home_bar_icon.png" class="image-size" (click)="GoToHomePage()"></ion-img>
           <a class="text-menu">Home</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
-          <ion-img src="user_icon.png" class="image-size" (click)="GoToProfile()"></ion-img>
+          <ion-img src="../../../assets/user_icon.png" class="image-size" (click)="GoToProfile()"></ion-img>
           <a class="text-menu">Profile</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
-          <ion-img src="home_icon.png" class="image-size" (click)="GoToHomesForSale()"></ion-img>
+          <ion-img src="../../../assets/home_icon.png" class="image-size" (click)="GoToHomesForSale()"></ion-img>
           <a class="text-menu">Rent</a>
         </ion-card-content>
         <ion-card-content class="menu-bar-item">
-          <ion-img src="sign_out.png" class="image-size" (click)="GoToLogIn()"></ion-img>
+          <ion-img src="../../../assetssign_out.png" class="image-size" (click)="GoToLogIn()"></ion-img>
           <a class="text-menu">Exit</a>
         </ion-card-content>
       </ion-card>
