@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export interface Home {
-  image1: File,
-  image2: File,
-  image3: File,
+  image1: string,
+  image2: string,
+  image3: string,
   location: string,
   price: string,
   area: number,
