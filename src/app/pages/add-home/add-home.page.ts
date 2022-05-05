@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, UrlSerializer } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { AddHomeService, User_Home } from 'src/app/apis/add-home.service';
 import { Storage } from '@ionic/storage';
-import { AlertController, DomController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-add-home',

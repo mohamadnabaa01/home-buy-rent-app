@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 export interface Home{
-  image1: string,
-  image2: string,
-  image3: string,
+  image1: Blob,
+  image2: Blob,
+  image3: Blob,
   location: string,
   price: number,
   area: number,
@@ -19,9 +19,6 @@ export interface User_Home{
   home_id: number
 }
 
-export interface image{
-  image1: string
-}
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +30,6 @@ export class AddHomeService {
   constructor(private http: HttpClient) { }
 
   addHome(home: Home, sale_type: string){
-    localStorage.setItem('image1', home.image1);
-    localStorage.setItem('image2', home.image2);
-    localStorage.setItem('image3', home.image3);
     return this.http.post(this.url + sale_type + '_homes.php', home);
   }
 
